@@ -12,7 +12,7 @@ sudo systemctl start jenkins
 sudo apt update -y
 sudo apt install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
+sudo apt install ansible -y
 
 #docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add 
