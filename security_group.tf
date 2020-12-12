@@ -62,6 +62,13 @@ resource "aws_security_group" "private-sg"{
     protocol = "tcp"
     cidr_blocks = [var.public_subnet_cidr]
   }
+  
+  egress {
+    from_port       = 0
+    to_port         = 0
+    protocol        = "-1"
+    cidr_blocks     = ["0.0.0.0/0"]
+  }
 
   vpc_id = aws_vpc.vpc.id
 
